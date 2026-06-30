@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 # =========================
 
 st.set_page_config(
-    page_title="Evaluador Económico - Conceptos",
+    page_title="Sistema de Evaluación Económica de Proyectos de Inversión",
     page_icon="📊",
     layout="wide"
 )
@@ -56,14 +56,20 @@ def formato_moneda(valor):
 # ENCABEZADO
 # =========================
 
-st.title("📊 Evaluador Económico para Reorganización de Almacén")
-st.markdown(
-    """
-    **Empresa:** Conceptos  
-    **Proyecto:** Reorganización del área de almacenamiento mediante racks, tarimas y señalización.  
-    **Objetivo:** Evaluar la viabilidad económica del proyecto mediante herramientas de Ingeniería Económica.
-    """
-)
+st.title("📊 Sistema de Evaluación Económica de Proyectos de Inversión")
+st.markdown("""
+Esta aplicación permite evaluar la viabilidad financiera de proyectos de inversión mediante herramientas de Ingeniería Económica.
+
+Los resultados se obtienen utilizando indicadores como:
+
+- Valor Presente Neto (VPN)
+- Tasa Interna de Retorno (TIR)
+- Relación Beneficio/Costo (B/C)
+- Valor Anual
+- Costo Anual de Recuperación de Capital
+- Periodo de Recuperación
+- Flujo de Efectivo
+""")
 
 st.divider()
 
@@ -310,24 +316,13 @@ st.markdown(
 # ESCENARIO DEL PROYECTO ORIGINAL
 # =========================
 
-st.header("🏢 Datos base del proyecto Conceptos")
+st.header("📌 Datos de ejemplo")
 
-st.markdown(
-    """
-    Los valores iniciales cargados en la aplicación corresponden al proyecto de reorganización del almacén:
+st.info("""
+Los valores cargados inicialmente corresponden a un ejemplo de evaluación económica de un proyecto desarrollado en una empresa textíl.
 
-    - **Inversión inicial:** $95,303.40
-    - **Beneficio anual estimado:** $47,290.00
-    - **Costo anual de mantenimiento:** $4,500.00
-    - **Flujo neto anual:** $42,790.00
-    - **Valor de rescate:** $15,000.00
-    - **TMAR:** 12%
-    - **Vida útil:** 5 años
-
-    La herramienta permite modificar estos datos para analizar distintos escenarios de decisión.
-    """
-)
-
+Todos los parámetros pueden modificarse para analizar diferentes escenarios de inversión.
+""")
 st.divider()
 
 st.caption("Aplicación desarrollada en Python con Streamlit para evaluación económica de proyectos.")
